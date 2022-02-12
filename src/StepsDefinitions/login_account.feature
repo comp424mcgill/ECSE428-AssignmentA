@@ -2,7 +2,7 @@ Feature: Login Account
 
   As a player
   I would like to login
-  So
+  To play games with my friends or check my statistics
 
   Scenario Outline: Player successfully login to their account
 
