@@ -16,7 +16,7 @@ Feature: View Player Profile
     Then "PlayerB"'s shall be displayed
 
     # Alternate Flow
-  Scenario: View existing player profile
+  Scenario: View personal profile
     Given "PlayerA" is logged into the system
     When "PlayerA" attempts to view his own profile
     Then "PlayerA"'s shall be displayed
