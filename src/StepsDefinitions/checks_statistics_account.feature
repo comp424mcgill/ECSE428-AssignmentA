@@ -6,4 +6,5 @@ Feature: Checks account's statistics
   # Normal Flow
   Scenario Outline: Player checks their statistics
     Given a player with email <email> and password <password>
-    When the player requests to check statistics
+    And the player is logged in
+    Then the player's statistics appears on display
