@@ -1,4 +1,4 @@
-Feature: View Online Friends
+Feature: Create Party
 
   As a player
   I would like to create a party

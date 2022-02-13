@@ -1,4 +1,4 @@
-Feature: View Online Friends
+Feature: Remove Friends
 
   As a player
   I would like to remove friends

@@ -1,4 +1,4 @@
-Feature: View Online Friends
+Feature: Delete Party
 
   As a player
   I would like to delete parties that I created.
