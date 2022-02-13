@@ -3,9 +3,9 @@
 --------------------------------------------------------
 Authors:
 
-Kalvin Khuu 260983539
+Kalvin Khuu 260983539 (kalvinkhuu)
 
-Hong Yi Meng 260978023
+Hong Yi Meng 260978023 (lunamor)
 
 Group 21
 
