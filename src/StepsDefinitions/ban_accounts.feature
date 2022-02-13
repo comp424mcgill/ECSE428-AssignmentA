@@ -18,7 +18,7 @@ Feature: Ban user's account
 
   # Error Flow
   Scenario: Moderator tries to ban an inexistent player
-    Given a moderator is logged into the system <moderator>
-    And a player's database <database>
-    When the moderator bans the player's account
+    Given a moderator is logged into the system "modA"
+    And a player's database {playerA, playerB}
+    When the moderator bans the player's account "playerB"
     Then an error is generated with message "User does not exist"

@@ -1,6 +1,6 @@
 Feature: Login Account
 
-  As a player
+  As a player or moderator
   I would like to login
   To play games with my friends or check my statistics
 

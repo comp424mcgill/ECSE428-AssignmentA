@@ -20,7 +20,7 @@ Feature: Paying taxes money
 
 
   # Alternative flow
-  Scenario: Player lands the Luxury Tax space and has enough money
+  Scenario Outline: Player lands the Luxury Tax space and has enough money
     Given a player's turn
     And the player's position after the dice roll
     And the player's balance <previousBalance>
@@ -28,11 +28,16 @@ Feature: Paying taxes money
     Then the player's balance gets substracted by 200$ <currentBalance>
     And the player's turn ends
 
+    Examples:
+      | previousBalance  | currentBalance |
+      | 400$             | 200$           |
+      | 200$             | 0$             |
+
       # Alternative flow
   Scenario: Player lands the Income Tax space and doesn't have enough money
     Given a player's turn
     And the player's position after the dice roll
-    And the player's balance <notEnoughBalance>
+    And the player's balance "0"
     When the player lands the Income Tax space
     Then the player needs to sell properties to have enough money to pay
     And the player's turn ends
@@ -41,7 +46,7 @@ Feature: Paying taxes money
   Scenario: Player lands the Luxury Tax space and doesn't have enough money
     Given a player's turn
     And the player's position after the dice roll
-    And the player's balance <notEnoughBalance>
+    And the player's balance "0"
     When the player lands the Luxury Tax space
     Then the player needs to sell properties to have enough money to pay
     And the player's turn ends

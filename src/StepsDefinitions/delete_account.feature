@@ -4,7 +4,7 @@ Feature: Delete Account
   To stop playing games or to remove the account in the database
 
   # Normal Flow
-  Scenario Outline: Player successfully deletes their account
+  Scenario: Player successfully deletes their account
 
     Given a player with <email> is logged into the system
     When the player <email> wants to delete their account

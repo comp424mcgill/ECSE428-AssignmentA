@@ -29,15 +29,15 @@ Feature: Edit Account Details
       | hongyi@email.com | password2 | newEmail2 |
 
     # Error Flow
-  Scenario Outline: Player requests to change the password, but the field is empty
-    Given a player with an email <email> and password <password>
+  Scenario: Player requests to change the password, but the field is empty
+    Given a player with an email "kalvin@email.com" and password "password1"
     When the player requests to change their password to an empty string
     Then an error is generated with message "Please enters your new password"
 
 
     # Error Flow
-  Scenario Outline: Player requests to change the email, but the field is empty
-    Given a player with an email <email> and password <password>
+  Scenario: Player requests to change the email, but the field is empty
+    Given a player with an email "kalvin@email.com" and password "password1"
     When the player requests to change their email to an empty string
     Then an error is generated with message "Please enters your new email"
 

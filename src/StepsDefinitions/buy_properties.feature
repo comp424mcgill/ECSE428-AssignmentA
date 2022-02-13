@@ -17,15 +17,15 @@ Feature: Buying a property
 
     Examples:
       | curPlayer | balance | properties  | cost | property  | afterBalance | afterProperties       |
-      | Player A  | 400     | Park Place  | 400  | Boardwalk | 0            | Boardwalk, Park Place |
+      | PlayerA   | 400     | Park Place  | 400  | Boardwalk | 0            | Boardwalk, Park Place |
 
   # Error Flow
   Scenario: Player tries to buy a property but doesn't have enough money
-    Given a player turn <curPlayer>
+    Given a player turn "PlayerA"
     And the player's position after the dice roll
-    And the player's properties <properties>
-    And the property's cost <cost>
-    And the player's balance <notEnoughBalance>
+    And the player's properties Park Place
+    And the property's cost "400"
+    And the player's balance "0"
     When the player wants to buy a property
     Then an error is generated with message "Balance too low"
     Then the player's turn ends

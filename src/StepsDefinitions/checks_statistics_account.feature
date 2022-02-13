@@ -7,4 +7,8 @@ Feature: Checks account's statistics
   Scenario Outline: Player checks their statistics
     Given a player with email <email> and password <password>
     And the player is logged in
-    Then the player's statistics appears on display
+    Then the player's statistics appears on display <statistics>
+
+    Examples:
+    | email  | password  | statistics   |
+    | emailA | passwordA | Winrate: 50% |

@@ -9,9 +9,12 @@ Feature:
     When a user join a game as a viewer
     Then the user can watch the game
 
+    |gameID|
+    |0110  |
+
   # Error flow
   Scenario Outline: Viewers join an inexistant game
-    Given no game with a number ID <gameID>
+    Given no game with a number ID "1010"
     When a user join a game as a viewer
     Then the user can not watch the game
     And an error is generated with message "This game ID does not exist"

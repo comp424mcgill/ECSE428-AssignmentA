@@ -16,8 +16,8 @@ Feature:
     | PlayerA, PlayerB, PlayerC | PlayerA |
 
   # Error Flow
-  Scenario Outline: Player starts a game by themself
-    Given a party of players <NotEnoughPlayers>
-    And the party leader <leader>
+  Scenario: Player starts a game by themself
+    Given a party of players "PlayerA"
+    And the party leader "PlayerA"
     When the party leader starts a game
     Then an error is generated with message "Not Enough players"

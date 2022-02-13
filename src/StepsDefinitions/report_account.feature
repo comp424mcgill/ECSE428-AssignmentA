@@ -10,9 +10,13 @@ Feature: Report player
     When the reporter reports the reportee
     Then the reporter successfully report a player
 
+    Examples:
+    | playerA | playerB |
+    | Kalvin  | Hong Yi |
+
   # Error Flow
-  Scenario Outline: Player tries to report a player that does not exist
-    Given a player <playerA> is logged into the system
-    When the reporter reports the reportee
+  Scenario: Player tries to report a player that does not exist
+    Given a player "Kalvin" is logged into the system
+    When the reporter reports the reportee "Kevin"
     Then an error is generated with message "User does not exist"
     Then the reporter unsuccessfully report a player

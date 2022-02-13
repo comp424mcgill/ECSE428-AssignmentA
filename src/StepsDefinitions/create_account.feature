@@ -17,7 +17,7 @@ Feature: Create Account
 
     # Error flow
   Scenario Outline: Player tries to create an account with an already existing email
-    Given a player with email <kalvin@email.com>
+    Given a player with email "kalvin@email.com"
     And an existing account with email "kalvin@email.com"
     When the player with email "kalvin@email.com" tries to create an account
     Then an error is generated with message "This email is already connected to an account"

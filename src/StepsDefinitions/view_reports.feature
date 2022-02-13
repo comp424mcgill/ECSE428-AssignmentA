@@ -7,7 +7,7 @@ Feature: View reports
   Scenario Outline: Moderator checks the reports of a player
     Given a moderator is logged into the system <moderator>
     And a player exist in the system <player>
-    When the moderator checks the player's account
+    When the moderator checks the player's account <player>
     Then the moderator sees the reports to the players <reports>
 
     Examples:
@@ -16,6 +16,6 @@ Feature: View reports
 
   # Error Flow
   Scenario: Moderator tries to check the reports of an inexistent player
-    Given a moderator is logged into the system <moderator>
-    When the moderator checks the inexistent player's account
+    Given a moderator is logged into the system "modA"
+    When the moderator checks the player's account "inexistentPlayer"
     Then an error is generated with message "User does not exist"

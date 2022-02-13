@@ -4,7 +4,7 @@ Feature: Pickup a Card
   To get a surprise event
 
   # Normal scenario
-  Scenario Outline: Player lands on a Chance or community chest space
+  Scenario: Player lands on a Chance or community chest space
     Given a player's turn
     And the player's position after the dice roll
     When the player's position is on a Chance or Community chest space

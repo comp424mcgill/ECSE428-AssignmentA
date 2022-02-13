@@ -21,10 +21,10 @@ Feature: Edit party settings
 
     # Error Flow
   Scenario: Player tries to edit the party's settings but current party does not respect it
-    Given a party of players <tooManyParty>
-    And a group of viewers <tooManyViewers>
-    And a party leader <leader>
-    And the current limit of players <playerLimit>
-    And the current limit of viewers <viewerLimit>
-    When the leader limits the amount of players or viewers
+    Given a party of players "PlayerA, PlayerB, PlayerC"
+    And a group of viewers "ViewerA, ViewerB"
+    And a party leader "PlayerA"
+    And the current limit of players "4"
+    And the current limit of viewers "2"
+    When the leader limits the amount of players "2" or viewers "1"
     Then an error is generated with message "Can not set the limit below the current party/viewer group size"
