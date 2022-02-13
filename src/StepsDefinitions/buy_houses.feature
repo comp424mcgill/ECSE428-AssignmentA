@@ -26,12 +26,13 @@ Feature: Buy house
     And the player did not roll his dice
     And the player's balance "0"
     And the player's properties "Boardwalk, Park Place" and their number of houses "2" and hotels "0"
+    And the house costs "200"
     When the player wants to buy a house for one of his properties "Boardwalk"
     Then an error is generated with message "Balance too low"
     Then the player rolls the dice
 
       # Error Flow
-  Scenario Outline: Player tries to buy a house but does not have all the properties
+  Scenario: Player tries to buy a house but does not have all the properties
     Given a player's turn "PlayerA"
     And the player did not roll his dice
     And the player's balance "400"
@@ -41,7 +42,7 @@ Feature: Buy house
     Then the player rolls the dice
 
   # Error Flow
-  Scenario Outline: Player buys a house but already has a hotel
+  Scenario: Player buys a house but already has a hotel
     Given a player's turn "PlayerA"
     And the player did not roll his dice
     And the player's balance "400"

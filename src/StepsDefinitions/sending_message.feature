@@ -31,3 +31,11 @@ Feature: Chat between players
     When the player "kalvin@email.com" sends an empty message to another player "hongyi@email.com"
     Then the player "kalvin@email.com" unsuccessfully sent the message to the other player "hongyi@email.com"
     And an error is generated with message "Message can not be empty"
+
+    # Error flow
+  Scenario: Player sends an message to non-existing user
+    Given a player "kalvin@email.com" is logged into the system
+    And player "hongyi@email.com" does not exist in the system
+    When the player "kalvin@email.com" sends an empty message to a  "hongyi@email.com"
+    Then no message shall be sent
+    And an error is generated with message "Player does not exist"

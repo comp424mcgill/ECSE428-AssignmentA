@@ -47,3 +47,19 @@ Feature: Pay rent
     Then the current player give all their money to the other player
     Then the current player is out of the game
     Then the next player's turn starts
+
+    # Alternative Flow
+  Scenario: Player lands on another player's property, but goes bankrupt, and winner is declared
+    Given there is only two players left {PlayerA, PlayerB}
+    And it is "PlayerA"'s turn
+    And another player is playing "PlayerB"
+    And the current player's position
+    And the current player's balance "0"
+    And the other player's balance "300"
+    And the other player's properties "Boardwalk, Park Place"
+    When the current player lands on one of the properties of the other player
+    Then the current player sells properties
+    Then the current player give all their money to the other player
+    Then the current player is out of the game
+    Then the game ends
+    And "PlayerB" is declared the winner

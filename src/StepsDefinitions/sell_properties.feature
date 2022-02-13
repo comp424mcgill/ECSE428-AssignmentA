@@ -17,3 +17,13 @@ Feature: Sell properties
     Examples:
       | curPlayer | balance | playerProperties       | propertyValue | property  |
       | Player A  | 400$    | Boardwalk, Park Place  | 200           | Boardwalk |
+
+    # Error flow
+    Scenario: Player attempts to sell property they do not own
+      Given a player's turn "PlayerA"
+      And the player's balance 300
+      And the property value 200
+      And the "PlayerB"'s properties "Park Place"
+      When the player attempts to sell "Park Place"
+      Then an error is generated with message "You do not have ownership of the property"
+      Then the player's balance increments remain 200

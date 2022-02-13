@@ -16,8 +16,20 @@ Feature: Create Account
     | hongyi@email.com | password2 |
 
     # Error flow
-  Scenario Outline: Player tries to create an account with an already existing email
+  Scenario: Player tries to create an account with an already existing email
     Given a player with email "kalvin@email.com"
     And an existing account with email "kalvin@email.com"
     When the player with email "kalvin@email.com" tries to create an account
     Then an error is generated with message "This email is already connected to an account"
+
+    # Error flow
+  Scenario: Player tries to create an account with an invalid email
+    Given the player is not logged in
+    When the player with email "!@#$%" tries to create an account
+    Then an error is generated with message "This email is not valid"
+
+    # Error flow
+  Scenario: Player tries to create an account with an illegal password
+    Given no existing account with email "kalvin@email.com"
+    When the player tries to create an account with email "kalvin@email.com" and password "   "
+    Then an error is generated with message "This password is not valid"

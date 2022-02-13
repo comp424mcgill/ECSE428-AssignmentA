@@ -16,4 +16,12 @@ Feature: Create Party
     Then a new party shall be created
     Then an invite link shall be provided to "PlayerA"
 
+    # Error Flow
+  Scenario: Player creates a party
+    Given "PlayerA" is logged into the system
+    Given "PlayerA" already have an ongoing party "382900"
+    When "PlayerA" creates a new party
+    Then no new party shall be created
+    And an error is generated with message "You already have an party"
+
 

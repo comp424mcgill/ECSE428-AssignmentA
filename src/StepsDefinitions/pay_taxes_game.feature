@@ -43,11 +43,24 @@ Feature: Paying taxes money
     And the player's turn ends
 
       # Alternative flow
-  Scenario: Player lands the Luxury Tax space and doesn't have enough money
+  Scenario: Player lands the Luxury Tax space and goes bankrupt
     Given a player's turn
     And the player's position after the dice roll
     And the player's balance "0"
     When the player lands the Luxury Tax space
     Then the player needs to sell properties to have enough money to pay
-    And the player's turn ends
+    Then the current player is out of the game
+    Then the next player's turn starts
+
+    # Alternative flow
+  Scenario: Player lands the Luxury Tax space and goes bankrupt, leaving one last player
+    Given there is only two players left {PlayerA, PlayerB}
+    And it is "PlayerA"'s turn
+    And the player's position after the dice roll
+    And the player's balance "0"
+    When the player lands the Luxury Tax space
+    Then the player needs to sell properties but still has not enough money
+    Then "PlayerA" is out of the game
+    Then then the game ends
+    And "PlayerB" is declared the winner
 

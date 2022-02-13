@@ -9,6 +9,7 @@ Feature: Report player
     And another player <playerB> exist in the system
     When the reporter reports the reportee
     Then the reporter successfully report a player
+    And a message shall be displayed "Successfully reported"
 
     Examples:
     | playerA | playerB |

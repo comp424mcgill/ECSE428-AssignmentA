@@ -18,7 +18,7 @@ Feature: Buy hotel
 
     Examples:
       | Player   | previousBalance  | property  | houses | hotel | currentHouse | currentHotel | costHotel | currentRent |
-      | PlayerA  | 400              | Boardwalk | 4      | 0     | 0            | 1            | 200$      | 2000$       |
+      | PlayerA  | 400              | Boardwalk | 4      | 0     | 0            | 1            | 200       | 2000        |
 
       # Error Flow
   Scenario: Player tries to buy a hotel but does not have enough money

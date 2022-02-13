@@ -1,7 +1,8 @@
 Feature: Play Against Random
 
   As a player
-  I would like to play against random players online.
+  I would like to play against random players online
+  when I don't have friends to play with.
 
   Background:
     Given the following user-players exist in the system:

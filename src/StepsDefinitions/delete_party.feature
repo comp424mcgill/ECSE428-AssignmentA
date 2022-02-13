@@ -50,7 +50,7 @@ Feature: Delete Party
     Given "PlayerD" is in the party "3920491"
     Given a game is in progress in the party "3920491"
     When "PlayerA" decides to delete the party "3920491"
-    Then an error shall be displayed forbidding the operation
+    Then an error is generated with message "Game in progress, cannot delete party"
     And party "3920491" shall still exist
 
     # Error Flow
@@ -63,5 +63,5 @@ Feature: Delete Party
     Given the game in party "3920491" has ended
     And and winner has been declared
     When "PlayerB" decides to delete the party "3920491"
-    Then an error shall be displayed forbidding the operation
+    Then an error is generated with message "Only the host is allowed to delete the party"
     And party "3920491" shall still exist

@@ -1,5 +1,5 @@
 Feature: Edit Account Details
-  As a player
+  As a player or moderator
   I would like to edit account details
   So that my account can be secure if someone has access to my old password or change details
 
@@ -41,4 +41,16 @@ Feature: Edit Account Details
     When the player requests to change their email to an empty string
     Then an error is generated with message "Please enters your new email"
 
+    # Error Flow
+  Scenario: Player requests to change the password, but the field contains illegal characters
+    Given a player with an email "kalvin@email.com" and password "password1"
+    When the player requests to change their password to "[;;']"
+    Then an error is generated with message "Password contains illegal characters"
+
+
+    # Error Flow
+  Scenario: Player requests to change the email, but the field contains illegal characters
+    Given a player with an email "kalvin@email.com" and password "password1"
+    When the player requests to change their email to "[;;'].email.com"
+    Then an error is generated with message "Email contains illegal characters"
 

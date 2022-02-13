@@ -1,7 +1,8 @@
 Feature: Play Against Bots
 
   As a player
-  I would like to play against bots.
+  I would like to play against bots
+  so I can practice without affecting my rank.
 
   Background:
     Given the following user-players exist in the system:
