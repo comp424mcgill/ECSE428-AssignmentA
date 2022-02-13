@@ -1,3 +1,6 @@
+# Hong Yi Meng 260978023
+# Kalvin Khuu 260983539
+
 Feature: Collecting money from the GO space
 
   As a player

@@ -1,3 +1,6 @@
+# Hong Yi Meng 260978023
+# Kalvin Khuu 260983539
+
 Feature: Pickup a Card
   As a player
   I would like to pick up a Card if I ever land on the chance or community chest space

@@ -1,3 +1,6 @@
+# Hong Yi Meng 260978023
+# Kalvin Khuu 260983539
+
 Feature: Delete Account
   As a player
   I would like to delete my account

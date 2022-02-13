@@ -1,6 +1,9 @@
+# Hong Yi Meng 260978023
+# Kalvin Khuu 260983539
+
 Feature: Add Friends
   As a player
-  I would like send friend request to other users
+  I would like to send friend request to other users
   So I can play games with my friends
 
   # Normal Flow

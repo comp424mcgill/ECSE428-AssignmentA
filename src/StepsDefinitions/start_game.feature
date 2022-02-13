@@ -1,3 +1,6 @@
+# Hong Yi Meng 260978023
+# Kalvin Khuu 260983539
+
 Feature:
   As a player
   I would like to start a game

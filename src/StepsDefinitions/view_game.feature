@@ -1,3 +1,6 @@
+# Hong Yi Meng 260978023
+# Kalvin Khuu 260983539
+
 Feature:
   As a user
   I would like to view a game as a viewer

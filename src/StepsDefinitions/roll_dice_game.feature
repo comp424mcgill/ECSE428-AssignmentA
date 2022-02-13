@@ -1,7 +1,10 @@
+# Hong Yi Meng 260978023
+# Kalvin Khuu 260983539
+
 Feature: Roll dice
 
   As a player
-  I would like to roll a six face die
+  I would like to roll two six-face dice
   So I can move my avatar in that amount of spaces
 
   # Normal flow

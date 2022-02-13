@@ -1,7 +1,11 @@
+# Hong Yi Meng 260978023
+# Kalvin Khuu 260983539
+
 Feature: View Player Profile
 
   As a player
-  I would like to view other people's profiles.
+  I would like to view other people's profiles
+  To compare myself to them
 
   Background:
     Given the following user-players exist in the system:

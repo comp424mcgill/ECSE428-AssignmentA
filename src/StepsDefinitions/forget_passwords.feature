@@ -1,3 +1,6 @@
+# Hong Yi Meng 260978023
+# Kalvin Khuu 260983539
+
 Feature: Retrieve forgotten password
   As a player or moderator
   I would like to retrieve my forgotten password

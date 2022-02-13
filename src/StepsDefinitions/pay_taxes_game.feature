@@ -1,7 +1,10 @@
+# Hong Yi Meng 260978023
+# Kalvin Khuu 260983539
+
 Feature: Paying taxes money
 
   As a player
-  I shall pay 200$ when landing on a tax space
+  I shall pay the tax amount when landing on a tax space
   To abide by the rules of the monopoly game
 
   # Normal flow
@@ -25,13 +28,13 @@ Feature: Paying taxes money
     And the player's position after the dice roll
     And the player's balance <previousBalance>
     When the player lands the Luxury Tax space
-    Then the player's balance gets substracted by 200$ <currentBalance>
+    Then the player's balance gets substracted by 100$ <currentBalance>
     And the player's turn ends
 
     Examples:
       | previousBalance  | currentBalance |
-      | 400$             | 200$           |
-      | 200$             | 0$             |
+      | 400$             | 300$           |
+      | 200$             | 100$             |
 
       # Alternative flow
   Scenario: Player lands the Income Tax space and doesn't have enough money
